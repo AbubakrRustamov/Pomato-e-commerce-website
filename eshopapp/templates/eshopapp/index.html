@@ -196,17 +196,14 @@
                     {% csrf_token %}
                     <div>
                         <select name="category_id" style="display: none;">
-                            <option>Choose</option>
+                            <option value="{{category}}">All products</option>
                             {% for category in categoryes %}
                                 <option value="{{ category.id }}" >{{ category }}</option>
                             {% endfor %}
                         </select>
                     </div>
                     
-                    <button class="btn btn-success" type="submit">Sort</button>
-                </form>
-                <form action="" method="GET" name="all_products">
-                    <button class="btn btn-danger" type="submit">All products</button>
+                    <button class="btn btn-success btn-lg" type="submit">Sort</button>
                 </form>
             </div>
         </div>
